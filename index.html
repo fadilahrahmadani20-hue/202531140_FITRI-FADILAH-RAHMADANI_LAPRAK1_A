@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laprak 1 Lab Multi - Beranda</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav {
+            margin: 15px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0756a5;
+            font-weight: bold;
+            margin: 0 8px;
+        }
+
+        nav a:first-child {
+            margin-left: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #999;
+            margin: 15px 0;
+        }
+
+        .layout {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        main {
+            flex: 3;
+            min-width: 0;
+        }
+
+        aside {
+            flex: 1;
+            min-width: 180px;
+            background-color: #f1f1f1;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        article {
+            margin-bottom: 25px;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+        }
+
+        video {
+            width: 320px;
+            height: 240px;
+            max-width: 100%;
+            background-color: #000;
+        }
+
+        audio {
+            max-width: 100%;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                margin: 15px;
+            }
+
+            .layout {
+                flex-direction: column;
+            }
+
+            main,
+            aside {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Laporan Praktikum Laboratorium Multimedia</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a> |
+        <a href="pendaftaran.html">Pendaftaran</a> |
+        <a href="https://itpln.ac.id" target="ITPLN_WEB">Web ITPLN</a>
+    </nav>
+
+    <hr>
+
+    <div class="layout">
+
+        <main>
+
+            <article>
+                <h2>Selamat Datang Di Laboratorium Multimedia</h2>
+
+                <img src="Logo multi.png" alt="Logo Lab" class="logo">
+
+                <p>
+                    Selamat datang di Laboratorium Multimedia.
+                    Halaman ini dibuat sebagai bagian dari praktikum
+                    untuk mempelajari struktur dan elemen HTML.
+                    <strong>praktikum mahasiswa</strong> merupakan
+                    kegiatan penting untuk meningkatkan pemahaman
+                    dan keterampilan dalam bidang teknologi informasi.
+                    <em>Harap menjaga kebersihan!</em>
+                    <del>Dilarang makan</del>
+                    <ins>Dilarang membawa makanan dan minuman</ins>
+                    selama kegiatan praktikum berlangsung.
+                </p>
+            </article>
+
+            <hr>
+
+            <article>
+                <h2>Media Informasi</h2>
+
+                <section>
+                    <h3>Video Profil</h3>
+
+                    <video width="320" height="240" controls>
+                        <source src="video.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung tag video.
+                    </video>
+                </section>
+
+                <section>
+                    <h3>Audio</h3>
+
+                    <audio controls>
+                        <source src="audio.mp3" type="audio/mpeg">
+                        Browser Anda tidak mendukung tag audio.
+                    </audio>
+
+                    <p>
+                        Sunroof - Nicky Youre, Dazy.
+                    </p>
+                </section>
+            </article>
+
+        </main>
+
+        <aside>
+            <h3>Pengumuman</h3>
+
+            <p>
+                Praktikan wajib menggunakan Almamater saat
+                praktikum berlangsung, dan menaati seluruh
+                peraturan Laboratorium.
+            </p>
+        </aside>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>
+            &copy; 2026 Fitri Fadilah Rahmadani_202531140
+        </p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laporan Praktikum - Pendaftaran</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        nav {
+            margin: 15px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0756a5;
+            font-weight: bold;
+            margin: 0 8px;
+        }
+
+        nav a:first-child {
+            margin-left: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #999;
+            margin: 15px 0;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 750px;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        td:first-child {
+            width: 180px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            max-width: 350px;
+            padding: 7px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .pilihan label {
+            display: inline-block;
+            margin-right: 12px;
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .tombol {
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 8px 18px;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                margin: 15px;
+            }
+
+            td:first-child {
+                width: 35%;
+            }
+
+            td {
+                padding: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Laporan Praktikum - Pendaftaran</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a> |
+        <a href="pendaftaran.html">Pendaftaran</a>
+    </nav>
+
+    <hr>
+
+    <main>
+        <h2>Form Pendaftaran Praktikan</h2>
+
+        <form method="post" action="">
+
+            <table>
+                <tr>
+                    <td><label for="nama">Nama Lengkap</label></td>
+                    <td>
+                        <input type="text" id="nama" name="nama" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="pass">Password</label></td>
+                    <td>
+                        <input type="password" id="pass" name="pass" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="nim">NIM</label></td>
+                    <td>
+                        <input type="text" id="nim" name="nim" inputmode="numeric" pattern="[0-9]+"
+                            oninput="this.value=this.value.replace(/[^0-9]/g,'')" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="tgl">Tanggal Lahir</label></td>
+                    <td>
+                        <input type="date" id="tgl" name="tgl" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td class="pilihan">
+                        <label>
+                            <input type="radio" name="jk" value="L" required>
+                            Laki-Laki
+                        </label>
+
+                        <label>
+                            <input type="radio" name="jk" value="P">
+                            Perempuan
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Minat Bidang</td>
+                    <td class="pilihan">
+                        <label>
+                            <input type="checkbox" name="minat" value="web">
+                            Web
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="minat" value="network">
+                            Jaringan
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="minat" value="design">
+                            Design/Modeling
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="prodi">Program Studi</label></td>
+                    <td>
+                        <select id="prodi" name="prodi" required>
+                            <option value="">-- Pilih Program Studi --</option>
+                            <option value="IF">S1 Teknik Informatika</option>
+                            <option value="SI">S1 Sistem Informasi</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="alasan">Alasan Mendaftar</label></td>
+                    <td>
+                        <textarea id="alasan" name="alasan" rows="3" cols="20" required></textarea>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="tombol">
+                <button type="submit">Kirim</button>
+                <button type="reset">Reset</button>
+            </div>
+
+        </form>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Fitri Fadilah Rahmadani_202531140</p>
+    </footer>
+
+</body>
+
+</html>
